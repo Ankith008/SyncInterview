@@ -15,8 +15,10 @@ export default function YourRooms() {
             candidate={room.candidate}
             scheduledAt={room.scheduledAt}
             slug={room.slug}
-            onJoin={(slug) => console.log("Join:", slug)}
-            onCopy={(slug) => navigator.clipboard.writeText(`/room/${slug}`)}
+            onJoin={(slug: string) => console.log("Join:", slug)}
+            onCopy={(slug: string) =>
+              navigator.clipboard.writeText(`/room/${slug}`)
+            }
           />
         ))
       ) : (

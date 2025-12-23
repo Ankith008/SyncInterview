@@ -1,3 +1,5 @@
+import { Session } from "@/types/session";
+
 export const recentActivities = [
   {
     id: "1",
@@ -109,6 +111,35 @@ export const pastInterviews = [
     result: "Not Selected",
     feedback: "Understood approach but struggled with edge cases.",
     conductedAt: "2025-01-10T16:00:00.000Z",
+    duration: 40,
+  },
+];
+
+export const sessions: Session[] = [
+  {
+    id: "s1",
+    roomTitle: "Frontend Interview - Rahul",
+    candidate: "Rahul",
+    template: "Frontend",
+    status: "live",
+    startedAt: "2025-01-21T11:00:00Z",
+  },
+  {
+    id: "s2",
+    roomTitle: "System Design - Karan",
+    candidate: "Karan",
+    template: "System Design",
+    status: "completed",
+    startedAt: "2025-01-20T10:00:00Z",
+    duration: 50,
+  },
+  {
+    id: "s3",
+    roomTitle: "DSA Round - Priya",
+    candidate: "Priya",
+    template: "DSA",
+    status: "completed",
+    startedAt: "2025-01-18T16:00:00Z",
     duration: 40,
   },
 ];

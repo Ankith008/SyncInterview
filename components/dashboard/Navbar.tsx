@@ -9,15 +9,15 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center justify-between px-6 py-4 relative z-50">
-      <div className="flex items-center gap-2">
+      <Link href={"/"} className="flex items-center gap-2 cursor-pointer">
         <Image src="/sync.png" alt="logo" width={150} height={50} />
-      </div>
+      </Link>
 
       <div className="hidden md:flex items-center gap-8 text-white">
         <Link href="/Roomdashboard" className="hover:text-purple-300">
           Rooms
         </Link>
-        <Link href="/sessions" className="hover:text-purple-300">
+        <Link href="/Sessions" className="hover:text-purple-300">
           Sessions
         </Link>
         <Link href="/questions" className="hover:text-purple-300">
@@ -50,7 +50,7 @@ export default function Navbar() {
 
           <Link
             onClick={() => setOpen(false)}
-            href="/sessions"
+            href="/Sessions"
             className="px-4 py-2 hover:bg-white/20"
           >
             Sessions
