@@ -20,7 +20,7 @@ export default function Navbar() {
         <Link href="/Sessions" className="hover:text-purple-300">
           Sessions
         </Link>
-        <Link href="/questions" className="hover:text-purple-300">
+        <Link href="/Questions" className="hover:text-purple-300">
           Questions
         </Link>
         <Link href="/settings" className="hover:text-purple-300">
@@ -58,7 +58,7 @@ export default function Navbar() {
 
           <Link
             onClick={() => setOpen(false)}
-            href="/questions"
+            href="/Questions"
             className="px-4 py-2 hover:bg-white/20"
           >
             Questions
