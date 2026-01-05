@@ -10,11 +10,23 @@ export default function AddQuestionModal({ open, onClose }: Props) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center  bg-black/60">
-      <div className="bg-[#1b0f2e] border border-white/10 rounded-xl w-full max-w-xl p-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+      <div
+        className="
+          bg-[#12182b]/90
+          backdrop-blur-xl
+          border border-white/10
+          rounded-2xl
+          w-full max-w-xl
+          p-6
+        "
+      >
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-semibold">Add New Question</h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-white">
+          <h2 className="text-lg font-semibold text-white">Add New Question</h2>
+          <button
+            onClick={onClose}
+            className="text-white/50 hover:text-white transition"
+          >
             ✕
           </button>
         </div>
@@ -45,11 +57,27 @@ export default function AddQuestionModal({ open, onClose }: Props) {
           <div className="flex justify-end gap-3 pt-4">
             <button
               onClick={onClose}
-              className="px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10"
+              className="
+                px-4 py-2 rounded-lg
+                bg-[#1a2040]/70
+                border border-white/10
+                text-white/80
+                hover:bg-[#1f2550]/70
+                transition
+              "
             >
               Cancel
             </button>
-            <button className="px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 font-semibold">
+
+            <button
+              className="
+                px-4 py-2 rounded-lg
+                bg-gradient-to-r from-indigo-500 to-purple-600
+                hover:from-indigo-400 hover:to-purple-500
+                font-semibold text-white
+                transition
+              "
+            >
               Save Question
             </button>
           </div>
@@ -62,10 +90,22 @@ export default function AddQuestionModal({ open, onClose }: Props) {
 function Input({ label, placeholder }: any) {
   return (
     <div>
-      <label className="text-sm text-gray-300">{label}</label>
+      <label className="text-xs uppercase tracking-wide text-gray-400">
+        {label}
+      </label>
       <input
         placeholder={placeholder}
-        className="mt-1 w-full bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none"
+        className="
+          mt-1 w-full
+          bg-[#0b1020]
+          border border-white/10
+          rounded-lg
+          px-3 py-2
+          text-sm text-white
+          placeholder-white/40
+          outline-none
+          focus:border-indigo-400/40
+        "
       />
     </div>
   );
@@ -74,11 +114,24 @@ function Input({ label, placeholder }: any) {
 function Textarea({ label, placeholder }: any) {
   return (
     <div>
-      <label className="text-sm text-gray-300">{label}</label>
+      <label className="text-xs uppercase tracking-wide text-gray-400">
+        {label}
+      </label>
       <textarea
         rows={3}
         placeholder={placeholder}
-        className="mt-1 w-full bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none resize-none"
+        className="
+          mt-1 w-full
+          bg-[#0b1020]
+          border border-white/10
+          rounded-lg
+          px-3 py-2
+          text-sm text-white
+          placeholder-white/40
+          outline-none
+          resize-none
+          focus:border-indigo-400/40
+        "
       />
     </div>
   );

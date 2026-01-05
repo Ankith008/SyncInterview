@@ -4,7 +4,7 @@ import PastInterviewCard from "./PastInterviewCard";
 
 export default function PastInterview() {
   return (
-    <section className="bg-white/5 rounded-3xl divide-y divide-white/20 space-y-3">
+    <section className="rounded-3xl divide-y divide-white/20 space-y-3">
       {pastInterviews.length > 0 ? (
         pastInterviews.map((interview) => (
           <PastInterviewCard

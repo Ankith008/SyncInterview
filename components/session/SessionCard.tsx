@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 type SessionStatus = "live" | "completed" | "aborted";
@@ -22,18 +23,17 @@ export default function SessionCard({ session }: SessionProps) {
       className="
         relative
         cursor-pointer
-        bg-white/5
-        backdrop-blur-md
+        bg-[#2a3044]/85
+        backdrop-blur-xl
         rounded-xl
         px-5
         py-4
         flex
         items-center
         justify-between
-        border
-        border-white/10
-        hover:bg-white/10
-        transition
+        border border-white/10
+        hover:bg-[#323959]/85
+        transition-all duration-200
       "
     >
       <div className="flex items-center gap-4">
@@ -42,10 +42,13 @@ export default function SessionCard({ session }: SessionProps) {
           className={`w-[3px] h-14 rounded-full ${
             session.status === "live"
               ? "bg-gradient-to-b from-green-400 to-emerald-600"
+              : session.status === "aborted"
+              ? "bg-gradient-to-b from-red-400 to-rose-600"
               : "bg-gradient-to-b from-purple-500 to-indigo-500"
           }`}
         />
 
+        {/* icon */}
         <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center font-semibold text-white">
           {session.template[0]}
         </div>
@@ -57,12 +60,15 @@ export default function SessionCard({ session }: SessionProps) {
             <span
               className={`px-2 py-0.5 rounded-full text-xs ${
                 session.status === "live"
-                  ? "bg-green-500/20 text-green-300"
-                  : "bg-slate-500/20 text-slate-300"
+                  ? "bg-green-400/20 text-green-300"
+                  : session.status === "aborted"
+                  ? "bg-red-400/20 text-red-300"
+                  : "bg-slate-400/20 text-slate-300"
               }`}
             >
               {session.status}
             </span>
+
             <span className="text-white/60">{session.candidate}</span>
           </div>
 
@@ -72,7 +78,14 @@ export default function SessionCard({ session }: SessionProps) {
         </div>
       </div>
 
-      <button className="text-purple-400 font-medium hover:text-purple-300">
+      <button
+        className="
+          text-sm font-medium
+          text-indigo-400
+          hover:text-indigo-300
+          transition
+        "
+      >
         {session.status === "live" ? "Join" : "View Session"}
       </button>
     </div>

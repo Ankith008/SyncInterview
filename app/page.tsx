@@ -5,15 +5,19 @@ import Navbar from "@/components/dashboard/Navbar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#0c0618] to-[#0a0a12]">
-      <div className="absolute top-0 left-0 w-full h-[500px] bg-purple-600/20 blur-[120px] rounded-full" />
-      <Navbar />
-      <Hero />
-      <Keyfeature />
-      <Cta />
-      <footer className="text-center text-gray-500 py-8 text-sm">
-        SyncInterview © 2025
-      </footer>
+    <main className="relative min-h-screen  bg-gradient-to-b from-[#0f172a] via-[#020617] to-[#020617]">
+      <div className="absolute top-[-120px] left-[-120px] w-[420px] h-[420px] bg-indigo-500/20 blur-[140px] rounded-full" />
+
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <Keyfeature />
+        <Cta />
+
+        <footer className="text-center text-gray-400 py-8 text-sm">
+          SyncInterview © 2025
+        </footer>
+      </div>
     </main>
   );
 }

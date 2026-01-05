@@ -8,19 +8,42 @@ export default function QuestionSidebar() {
 
   return (
     <>
-      <div className="bg-white/5 border border-white/10 rounded-xl p-5 space-y-6">
+      <div
+        className="
+          bg-[#12182b]/80
+          backdrop-blur-xl
+          border border-white/10
+          rounded-2xl
+          p-5
+          space-y-6
+        "
+      >
         {/* Search */}
         <div>
-          <h3 className="text-sm font-semibold mb-2">Search</h3>
+          <h3 className="text-xs uppercase tracking-wide text-gray-400 mb-2">
+            Search
+          </h3>
           <input
             placeholder="Search question..."
-            className="w-full bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none"
+            className="
+              w-full
+              bg-[#0b1020]
+              border border-white/10
+              rounded-lg
+              px-3 py-2
+              text-sm text-white
+              placeholder-white/40
+              outline-none
+              focus:border-indigo-400/40
+            "
           />
         </div>
 
         {/* Overview */}
         <div>
-          <h3 className="text-sm font-semibold mb-3">Overview</h3>
+          <h3 className="text-xs uppercase tracking-wide text-gray-400 mb-3">
+            Overview
+          </h3>
           <div className="grid grid-cols-2 gap-3 text-sm">
             <Stat label="Total" value="45" />
             <Stat label="Prebuilt" value="30" />
@@ -31,7 +54,9 @@ export default function QuestionSidebar() {
 
         {/* Filters */}
         <div>
-          <h3 className="text-sm font-semibold mb-3">Filter</h3>
+          <h3 className="text-xs uppercase tracking-wide text-gray-400 mb-3">
+            Filter
+          </h3>
           <div className="space-y-2">
             <FilterBtn active text="ALL" />
             <FilterBtn text="PREBUILT" />
@@ -40,9 +65,15 @@ export default function QuestionSidebar() {
           </div>
         </div>
 
+        {/* CTA */}
         <button
           onClick={() => setOpen(true)}
-          className="w-full bg-purple-600 hover:bg-purple-700 py-2 rounded-lg font-semibold"
+          className="
+            w-full py-2 rounded-lg font-semibold
+            bg-gradient-to-r from-indigo-500 to-purple-600
+            hover:from-indigo-400 hover:to-purple-500
+            transition
+          "
         >
           + Add Question
         </button>
@@ -55,9 +86,16 @@ export default function QuestionSidebar() {
 
 function Stat({ label, value }: any) {
   return (
-    <div className="bg-white/10 rounded-lg p-3">
-      <p className="text-xs text-gray-300">{label}</p>
-      <p className="text-lg font-semibold">{value}</p>
+    <div
+      className="
+        bg-[#1a2040]/70
+        border border-white/10
+        rounded-lg
+        p-3
+      "
+    >
+      <p className="text-xs text-white/60">{label}</p>
+      <p className="text-lg font-semibold text-white">{value}</p>
     </div>
   );
 }
@@ -65,12 +103,15 @@ function Stat({ label, value }: any) {
 function FilterBtn({ text, active }: any) {
   return (
     <button
-      className={`w-full py-2 rounded-lg text-sm font-semibold border
+      className={`
+        w-full py-2 rounded-lg text-sm font-medium
+        transition
         ${
           active
-            ? "bg-purple-600 border-purple-500"
-            : "border-white/10 hover:bg-white/10"
-        }`}
+            ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
+            : "bg-[#1a2040]/70 border border-white/10 text-white/80 hover:bg-[#1f2550]/70"
+        }
+      `}
     >
       {text}
     </button>

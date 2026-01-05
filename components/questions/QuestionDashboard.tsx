@@ -14,13 +14,27 @@ export default function QuestionDashboard() {
       </div>
 
       {/* Right Panel */}
-      <div className="md:col-span-3">
-        <h1 className="text-2xl font-semibold mb-1">Your Questions</h1>
-        <p className="text-sm text-gray-300 mb-6">
-          Manage prebuilt and custom interview questions
-        </p>
+      <div className="md:col-span-3 space-y-6">
+        {/* Header */}
+        <div>
+          <h1 className="text-2xl font-semibold text-white">Your Questions</h1>
+          <p className="text-sm text-white/60">
+            Manage prebuilt and custom interview questions
+          </p>
+        </div>
 
-        <QuestionList />
+        {/* Content container */}
+        <div
+          className="
+            bg-[#12182b]/70
+            backdrop-blur-xl
+            border border-white/10
+            rounded-3xl
+            p-8
+          "
+        >
+          <QuestionList />
+        </div>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const questions = [
 
 export default function QuestionList() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {questions.map((q, i) => (
         <QuestionCard key={i} {...q} />
       ))}

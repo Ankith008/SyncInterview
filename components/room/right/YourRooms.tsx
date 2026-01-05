@@ -4,7 +4,7 @@ import RoomCard from "./RoomCard";
 
 export default function YourRooms() {
   return (
-    <section className="bg-white/5 rounded-3xl divide-y divide-white/20 space-y-3">
+    <section className="rounded-3xl space-y-3">
       {sampleRooms.length > 0 ? (
         sampleRooms.map((room) => (
           <RoomCard

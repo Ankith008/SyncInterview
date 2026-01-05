@@ -4,9 +4,9 @@ import React from "react";
 type RoomStatus = "scheduled" | "live" | "completed";
 
 const statusStyle: Record<RoomStatus, string> = {
-  scheduled: "bg-purple-500/20 text-purple-300",
-  live: "bg-green-500/20 text-green-300",
-  completed: "bg-slate-500/20 text-slate-300",
+  scheduled: "bg-purple-400/20 text-purple-300",
+  live: "bg-green-400/20 text-green-300",
+  completed: "bg-slate-400/20 text-slate-300",
 };
 
 export default function RoomCard({
@@ -21,17 +21,17 @@ export default function RoomCard({
   return (
     <div
       className="
-      relative
-      bg-white/5
-      backdrop-blur-md
-      rounded-xl
-      cursor-pointer
-      px-5
-      py-4
-      border border-white/10
-      hover:bg-white/10
-      transition
-    "
+        relative
+        bg-[#2a3044bb]
+        backdrop-blur-xl
+        rounded-xl
+        cursor-pointer
+        px-5
+        py-4
+        border border-white/10
+        hover:bg-[#323959]/85
+        transition-all duration-200
+      "
     >
       {/* left accent */}
       <div className="absolute left-0 top-3 bottom-3 w-[3px] rounded-full bg-gradient-to-b from-purple-500 to-indigo-500" />
@@ -56,16 +56,27 @@ export default function RoomCard({
           </div>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           <button
             onClick={onJoin}
-            className="text-sm text-purple-400 hover:text-purple-300"
+            className="
+              text-sm font-medium
+              text-indigo-400
+              hover:text-indigo-300
+              transition
+            "
           >
             Join
           </button>
+
           <button
             onClick={onCopy}
-            className="text-sm text-white/50 hover:text-white/70"
+            className="
+              text-sm
+              text-white/50
+              hover:text-white/70
+              transition
+            "
           >
             Copy link
           </button>

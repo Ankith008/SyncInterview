@@ -20,8 +20,8 @@ export default function PastInterviewCard({
     <div
       className="
         relative
-        bg-white/5
-        backdrop-blur-md
+        bg-[#2a3044bb]
+        backdrop-blur-xl
         cursor-pointer
         rounded-xl
         pr-5
@@ -30,10 +30,9 @@ export default function PastInterviewCard({
         flex
         items-center
         justify-between
-        border
-        border-white/10
-        hover:bg-white/10
-        transition
+        border border-white/10
+        hover:bg-[#323959]/85
+        transition-all duration-200
       "
     >
       {/* left accent */}
@@ -48,7 +47,7 @@ export default function PastInterviewCard({
           <h3 className="font-medium text-white">{title}</h3>
 
           <div className="flex items-center gap-2 text-sm mt-1">
-            <span className="px-2 py-0.5 rounded-full bg-slate-500/20 text-slate-300 text-xs">
+            <span className="px-2 py-0.5 rounded-full bg-slate-400/20 text-slate-300 text-xs">
               completed
             </span>
             <span className="text-white/60">{candidate}</span>
@@ -58,7 +57,14 @@ export default function PastInterviewCard({
         </div>
       </div>
 
-      <button className="text-purple-400 font-medium hover:text-purple-300">
+      <button
+        className="
+          text-sm font-medium
+          text-indigo-400
+          hover:text-indigo-300
+          transition
+        "
+      >
         View Report
       </button>
     </div>
