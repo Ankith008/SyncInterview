@@ -9,11 +9,19 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.11.1",
     "@monaco-editor/react": "^4.7.0",
+    "@prisma/client": "^5.22.0",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "fabric": "^7.1.0",
     "monaco-editor": "^0.55.1",
     "next": "16.0.8",
+    "next-auth": "^4.24.13",
+    "prisma": "^5.22.0",
     "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react-dom": "19.2.1",
+    "react-google-recaptcha": "^3.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

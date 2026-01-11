@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, JetBrains_Mono, Poppins } from "next/font/google";
+import Providers from "./providers";
+import Navbar from "@/components/dashboard/Navbar";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -32,7 +34,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }

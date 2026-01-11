@@ -1,4 +1,3 @@
-import Navbar from "@/components/dashboard/Navbar";
 import SessionLeftPanel from "@/components/session/SessionLeftPanel";
 import SessionRightPanel from "@/components/session/SessionRightPanel";
 
@@ -12,8 +11,6 @@ export default function Page() {
     >
       {/* SAME GLOW AS ROOM DASHBOARD */}
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-indigo-500/20 blur-[180px] rounded-full" />
-
-      <Navbar />
 
       <div
         className="

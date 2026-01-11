@@ -9,7 +9,6 @@ export default function Home() {
       <div className="absolute top-[-120px] left-[-120px] w-[420px] h-[420px] bg-indigo-500/20 blur-[140px] rounded-full" />
 
       <div className="relative z-10">
-        <Navbar />
         <Hero />
         <Keyfeature />
         <Cta />
